@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hello, World! Page</title>
+    <title>Teahouse</title>
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <p>This is a "Hello World" example using HTML.</p>
+  <img id="timeImage" src="none.jpg" alt="Time-based image">
 </body>
+<script>
+  const IMAGE_URLS = {
+    "6am": "https://wp.jiinjoo.com/wp-content/uploads/2008/11/tea_6am.jpg",
+  };
+  const hour = new Date().getHours();
+  const img = document.getElementById("timeImage");
+
+  if (hour >= 6 && hour < 8) {
+    img.src = IMAGE_URLS["6am"];
+  } else if (hour >= 12 && hour < 18) {
+    img.src = IMAGE_URLS["6am"];
+  } else {
+    img.src = IMAGE_URLS["6am"];
+  }
+</script>
 </html>
