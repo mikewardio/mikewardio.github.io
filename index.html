@@ -40,19 +40,19 @@
   } else if (hour >= 17 && hour < 19) {
     img.src = IMAGE_URLS["6pm"];
   } else if (hour >= 19 && hour < 21) {
-    image.src = IMAGE_URLS["8pm"];
+    img.src = IMAGE_URLS["8pm"];
   } else if (hour >= 21 && hour < 23) {
-    image.src = IMAGE_URLS["10pm"];
+    img.src = IMAGE_URLS["10pm"];
   } else if (hour >= 23 || hour < 1) {
-    image.src = IMAGE_URLS["midnight"];
+    img.src = IMAGE_URLS["midnight"];
   } else if (hour >= 1 && hour < 3) {
-    image.src = IMAGE_URLS["2am"];
+    img.src = IMAGE_URLS["2am"];
   } else if (hour >= 3 && hour < 5) {
-    image.src = IMAGE_URLS["4am"];
+    img.src = IMAGE_URLS["4am"];
     if (hour === 3) {
       const minute = new Date().getMinutes();
       if (minute === 14) {
-        image.src = IMAGE_URLS["3:14am"];
+        img.src = IMAGE_URLS["3:14am"];
       }
     }
   }
