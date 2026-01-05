@@ -9,16 +9,52 @@
 <script>
   const IMAGE_URLS = {
     "6am": "https://wp.jiinjoo.com/wp-content/uploads/2008/11/tea_6am.jpg",
+    "8am": "https://wp.jiinjoo.com/wp-content/uploads/2008/11/tea_8am.jpg",
+    "10am": "https://wp.jiinjoo.com/wp-content/uploads/2008/11/tea_10am.jpg"
+    "noon": "https://wp.jiinjoo.com/wp-content/uploads/2008/11/tea_noon.jpg",
+    "2pm": "https://wp.jiinjoo.com/wp-content/uploads/2008/11/tea_2pm.jpg",
+    "4pm": "https://wp.jiinjoo.com/wp-content/uploads/2008/11/tea_4pm.jpg",
+    "6pm": "https://wp.jiinjoo.com/wp-content/uploads/2008/11/tea_6pm.jpg",
+    "8pm": "https://wp.jiinjoo.com/wp-content/uploads/2008/11/tea_8pm.jpg",
+    "10pm": "https://wp.jiinjoo.com/wp-content/uploads/2008/11/tea_10pm.jpg",
+    "midnight": "https://wp.jiinjoo.com/wp-content/uploads/2008/11/tea_midnight.jpg",
+    "2am": "https://wp.jiinjoo.com/wp-content/uploads/2008/11/tea_2am.jpg",
+    "4am": "https://wp.jiinjoo.com/wp-content/uploads/2008/11/tea_4am.jpg",
+    "3:14am": "https://wp.jiinjoo.com/wp-content/uploads/2009/01/tea_314am.jpg",
   };
   const hour = new Date().getHours();
   const img = document.getElementById("timeImage");
 
-  if (hour >= 6 && hour < 8) {
+  if (hour >= 5 && hour < 7) {
     img.src = IMAGE_URLS["6am"];
-  } else if (hour >= 12 && hour < 18) {
-    img.src = IMAGE_URLS["6am"];
-  } else {
-    img.src = IMAGE_URLS["6am"];
+  } else if (hour >= 7 && hour < 9) {
+    img.src = IMAGE_URLS["8am"];
+  } else if (hour >= 9 && hour < 11) {
+    img.src = IMAGE_URLS["10am"];
+  } else if (hour >= 11 && hour < 13) {
+    img.src = IMAGE_URLS["noon"];
+  } else if (hour >= 13 && hour < 15) {
+    img.src = IMAGE_URLS["2pm"];
+  } else if (hour >= 15 && hour < 17) {
+    img.src = IMAGE_URLS["4pm"];
+  } else if (hour >= 17 && hour < 19) {
+    img.src = IMAGE_URLS["6pm"];
+  } else if (hour >= 19 && hour < 21) {
+    image.src = IMAGE_URLS["8pm"];
+  } else if (hour >= 21 && hour < 23) {
+    image.src = IMAGE_URLS["10pm"];
+  } else if (hour >= 23 || hour < 1) {
+    image.src = IMAGE_URLS["midnight"];
+  } else if (hour >= 1 && hour < 3) {
+    image.src = IMAGE_URLS["2am"];
+  } else if (hour >= 3 && hour < 5) {
+    image.src = IMAGE_URLS["4am"];
+    if (hour === 3) {
+      const minute = new Date().getMinutes();
+      if (minute === 14) {
+        image.src = IMAGE_URLS["3:14am"];
+      }
+    }
   }
 </script>
 </html>
